@@ -48,8 +48,8 @@ void RTOS_OutputStatus(void)
 void TEST_Task(void* pvParameters)
 {
 	//__REV
-	uint8_t id;
-	uint16_t data[2] = {0};
+//	uint8_t id;
+//	uint16_t data[2] = {0};
 //	FATFS fs;
 //	FIL file;
 //	FRESULT fr;

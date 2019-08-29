@@ -12,7 +12,6 @@
 extern void USART_Transfer(uint8_t * data_out, uint8_t * data_in, uint32_t data_length);
 extern void Debug_Message(char * str, ...);
 
-
 void GetPlatInfo(void)
 {
 	uint16_t flash_size;
@@ -48,6 +47,6 @@ void BoardInfo_Task(void* pvParameters)
 
         ADC1_GetValue(&adc_value);
 		Debug_Message("ADC value = %d\n", adc_value);
-		vTaskDelay(pdMS_TO_TICKS(2000));
+		vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }

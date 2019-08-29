@@ -1,7 +1,9 @@
 #ifndef __DELAY_H
-#define __DELAY_H 
+#define __DELAY_H
 
-void delay_10us(unsigned int t);
-void delay_ms(unsigned int t);
+#include <stdint.h>
+
+void delay_us(uint32_t delay_us);
+void delay_ms(uint32_t delay_ms);
 
 #endif
