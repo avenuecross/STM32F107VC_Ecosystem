@@ -8,6 +8,7 @@
 #include "stm32f10x.h"
 #include "ADC_Driver.h"
 #include "Rtc.h"
+#include "serialflash.h"
 
 extern void USART_Transfer(uint8_t * data_out, uint8_t * data_in, uint32_t data_length);
 extern void Debug_Message(char * str, ...);
@@ -16,6 +17,7 @@ void GetPlatInfo(void)
 {
 	uint16_t flash_size;
 	uint32_t unique_id[3];
+    uint8_t  flash_id;
 
 	/* Following is platform info */
 
@@ -27,6 +29,10 @@ void GetPlatInfo(void)
 	unique_id[1] = *(volatile uint16_t *)0x1FFFF7EC;
 	unique_id[2] = *(volatile uint16_t *)0x1FFFF7F0;
 	Debug_Message("Chip unique ID: %X %X %X\n", unique_id[0], unique_id[1], unique_id[2]);
+
+    /* Extern flash */
+    flash_id = FLASH_ReadDeviceID();
+    Debug_Message("Serial Flash Device ID: %d\n", flash_id);
 }
 
 void BoardInfo_Task(void* pvParameters)
@@ -45,6 +51,8 @@ void BoardInfo_Task(void* pvParameters)
         RTC_GetTime(&time);
 		Debug_Message("Date: %d-%d-%d  %02d:%02d:%02d\n", time.year, time.month, time.day, time.hour, time.minute, time.second);
 
+		//adc->GetValue(data);
+		//Debug_Message("Pometer: %.2fV\nCPU temperature: %dC\n", ADC_GetVoltageValue(data[0]), ADC_GetCPUTemperature(data[1]));
         ADC1_GetValue(&adc_value);
 		Debug_Message("ADC value = %d\n", adc_value);
 		vTaskDelay(pdMS_TO_TICKS(5000));
