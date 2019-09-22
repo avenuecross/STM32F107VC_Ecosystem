@@ -19,9 +19,9 @@ static void vMainTask( void *pvParameters )
 {
     BaseType_t rc = 0;
 
-    Debug_Message("========================================\n\n");
-    Debug_Message("STM32F107VC6 Ecosystem Application Start\n\n");
-    Debug_Message("========================================\n\n");
+    Debug_Message("========================================\n\n\
+                   STM32F107VC6 Ecosystem Application Start\n\n\
+                   ========================================\n\n");
 
     rc = xTaskCreate( TEST_Task, "TEST", configMINIMAL_STACK_SIZE, NULL, 3, NULL);
     if (rc != pdPASS) for (;;);

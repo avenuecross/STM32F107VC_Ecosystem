@@ -406,14 +406,9 @@
               <FilePath>..\Application\DebugMessage.c</FilePath>
             </File>
             <File>
-              <FileName>GUI_Task.c</FileName>
+              <FileName>naruto.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Application\GUI_Task.c</FilePath>
-            </File>
-            <File>
-              <FileName>Naruto.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\Naruto.c</FilePath>
+              <FilePath>..\Application\naruto.c</FilePath>
             </File>
             <File>
               <FileName>sdcard.c</FileName>
@@ -424,6 +419,11 @@
               <FileName>serialflash.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Application\serialflash.c</FilePath>
+            </File>
+            <File>
+              <FileName>GUI_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\GUI_Task.c</FilePath>
             </File>
             <File>
               <FileName>TEST_Task.c</FileName>
