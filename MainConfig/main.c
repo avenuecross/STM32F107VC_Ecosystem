@@ -15,6 +15,8 @@ extern void GUI_Refresh_Task(void* pvParameters);
 extern void WIFI_Task(void* pvParameters);
 extern void BoardInfo_Task(void* pvParameters);
 
+extern void delay_us(uint32_t delay_us);
+
 static void vMainTask( void *pvParameters )
 {
     BaseType_t rc = 0;

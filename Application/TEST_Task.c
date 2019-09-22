@@ -3,7 +3,7 @@
 #include "task.h"
 #include "Delay.h"
 #include "EEPROM_Driver.h"
-#include "SerialFlash.h"
+#include "serialflash.h"
 #include "MULTIEDIT.h"
 #include "string.h"
 #include "GUI_task.h"
@@ -48,14 +48,11 @@ void RTOS_OutputStatus(void)
 void TEST_Task(void* pvParameters)
 {
 	//__REV
-//	uint8_t id;
+
 //	uint16_t data[2] = {0};
 //	FATFS fs;
 //	FIL file;
 //	FRESULT fr;
-	
-//	id = FLASH_ReadDeviceID();
-//	Debug_Message("Serial Flash Device ID: %d\n", id);
 
 //	f_mount(&fs, "", 0);
 //	fr = f_open(&file, "Abner" ,FA_READ);
@@ -66,15 +63,6 @@ void TEST_Task(void* pvParameters)
 
     while (1)
     {
-//		FLASH_SectorErase(0x0);
-//		FLASH_WritePage(data_buff, 0x0, 20);
-//		FLASH_Read(data_buff1, 0x0, 20);
-//		Debug_Message("Str: %s\n", data_buff1);
-		
-		//adc->GetValue(data);
-		//Debug_Message("Pometer: %.2fV\nCPU temperature: %dC\n", ADC_GetVoltageValue(data[0]), ADC_GetCPUTemperature(data[1]));
-		//UI_ShowMessage("Pometer: %.2fV\nCPU temperature: %dC\n", ADC_GetVoltageValue(data[0]), ADC_GetCPUTemperature(data[1]));
-		
 		//SD_initialize(0);
 		
 		/* LED Toggle for test */

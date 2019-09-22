@@ -59,6 +59,11 @@ uint8_t SPI_TransferSingleByte(uint8_t tx_data)
 	return rx_data;
 }
 
+/* 
+ * W25X16  14h
+ * W25X32  15h
+ * W25X64  16h
+ */
 uint8_t FLASH_ReadDeviceID(void)
 {
 	uint8_t device_id = 0;
